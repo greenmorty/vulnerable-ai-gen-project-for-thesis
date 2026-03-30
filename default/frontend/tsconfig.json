@@ -1,0 +1,31 @@
+// Responsibility: Configures TypeScript for the React 18 frontend workspace and Vite tooling.
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": false,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "types": [
+      "vite/client"
+    ]
+  },
+  "include": [
+    "src",
+    "vite.config.ts"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}
+

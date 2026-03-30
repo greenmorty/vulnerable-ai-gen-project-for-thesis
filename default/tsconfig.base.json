@@ -1,0 +1,16 @@
+// Responsibility: Shares strict TypeScript defaults across the backend and frontend workspaces.
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true
+  }
+}
+

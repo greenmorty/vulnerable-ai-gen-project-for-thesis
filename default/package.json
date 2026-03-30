@@ -1,0 +1,25 @@
+{
+  "//": "Responsibility: Defines the ShopSphere monorepo workspaces and shared development scripts.",
+  "name": "shopsphere",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "npm@10.9.2",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n backend,frontend -c cyan,magenta \"npm run dev --workspace @shopsphere/backend\" \"npm run dev --workspace @shopsphere/frontend\"",
+    "dev:backend": "npm run dev --workspace @shopsphere/backend",
+    "dev:frontend": "npm run dev --workspace @shopsphere/frontend",
+    "build": "npm run build --workspace @shopsphere/backend && npm run build --workspace @shopsphere/frontend",
+    "prisma:generate": "npm run prisma:generate --workspace @shopsphere/backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
+
